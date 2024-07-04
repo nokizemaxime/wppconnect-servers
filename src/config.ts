@@ -2,13 +2,13 @@ import { ServerOptions } from './types/ServerOptions';
 
 export default {
   secretKey: 'THISISMYSECURETOKEN',
-  host: 'http://localhost',
+  host: 'https://server01.koralink.uk/',
   port: '21465',
-  deviceName: 'WppConnect',
-  poweredBy: 'WPPConnect-Server',
+  deviceName: 'Koralink',
+  poweredBy: 'Koralink',
   startAllSession: true,
   tokenStoreType: 'file',
-  maxListeners: 15,
+  maxListeners: 0,
   customUserDataDir: './userDataDir/',
   webhook: {
     url: null,
@@ -80,28 +80,5 @@ export default {
   mapper: {
     enable: false,
     prefix: 'tagone-',
-  },
-  db: {
-    mongodbDatabase: 'tokens',
-    mongodbCollection: '',
-    mongodbUser: '',
-    mongodbPassword: '',
-    mongodbHost: '',
-    mongoIsRemote: true,
-    mongoURLRemote: '',
-    mongodbPort: 27017,
-    redisHost: 'localhost',
-    redisPort: 6379,
-    redisPassword: '',
-    redisDb: 0,
-    redisPrefix: 'docker',
-  },
-  aws_s3: {
-    region: 'sa-east-1' as any,
-    access_key_id: null,
-    secret_key: null,
-    defaultBucketName: null,
-    endpoint: null,
-    forcePathStyle: null,
-  },
+  }
 } as unknown as ServerOptions;
